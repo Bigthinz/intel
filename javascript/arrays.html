@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let oddNum=[1,3,5,7,9,11,13,15]
+    console.log( oddNum[7])
+    console.log(oddNum)
+    oddNum.push(17)
+    console.log(oddNum)
+    oddNum.shift(1)
+    console.log(oddNum)
+    oddNum.shift(3)
+    oddNum.shift(5)
+    oddNum.shift(7)
+    console.log(oddNum)
+
+    let even = [2,4,6,8,9,10]
+    even[2] = 5
+    console.log(even)
+
+
+    let numbers = [
+        {
+            oddfirst:1,
+            oddsec:3,
+            oddthird:5
+        },
+        {
+            evenfirst:2,
+            evensec:4,
+            eventhird:6
+        }
+    ]
+
+   console.log(numbers[0].oddthird)
+   console.log(numbers)
+   numbers.reverse()
+   console.log(numbers)
+
+   let members =[
+       "maleek",
+       "Dan",
+       "Eddy",
+       "Edem",
+       "Ama",
+       "Rejoyce"
+
+   ]
+   members.sort()
+   console.log(members)
+   console.log(members.length)
+   console.log(members.indexOf("Rejoyce"))
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let eng = {
+            department_1: 'CE',
+            department_2: 'EEE'
+            
+        }
+        let csitsa = {
+            department_1: 'IT',
+            department_2: 'CS'
+            
+        }
+        console.log(eng.department_2)
+        console.log(csitsa.department_1)
+
+        let uenr = {
+            department : {
+                Engineering:{
+                    ME:"ME",
+                    CE:'CE',
+                    EEE:'EEE'
+                },
+                CSITSAA : {
+                    IT:"IT",
+                    CS:'CS'
+                    
+                },
+                NATSU:{
+                    NATURAL:'NATURAL',
+                    ECO:'ECO',
+                    AHMS:'AHMS'
+            },
+            MASSA:{
+                    STAT: 'STAT',
+                    MATHS: 'MATHS',
+                    ATSU: 'ATSU'
+                }
+
+        }
+    } 
+    console.log(uenr.department.MASSA.STAT)
+    console.log(uenr.department.Engineering)
+    console.log(uenr)
+
+    console.log(uenr['department'])
+
+    let fav = uenr.department.Engineering
+    console.log(fav)
+
+    let {Engineering,CSITSAA}= uenr.department
+    console.log(Engineering)
+    console.log(CSITSAA)
+    </script>
+    
+</body>
+</html>

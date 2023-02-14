@@ -1,0 +1,69 @@
+.navbar{
+    background-color: yellowgreen;
+    grid-row-start:1 ;
+    grid-row-end: 2;
+
+    grid-column-start:1 ;
+    grid-column-end: 7;
+
+}
+
+.hero{
+    background-color: blue;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start:1 ;
+    grid-column-end: 7;
+
+
+
+}
+/* .hero img{
+    width: ;
+} */
+
+.ads{
+    background-color: orange;
+    grid-row-start: ;
+    grid-row-end: ;
+
+    grid-column-start:2 ;
+    grid-column-end: 6;
+
+}
+
+.thumbnail{
+    background-color: goldenrod;
+    grid-row-start: ;
+    grid-row-end: ;
+
+    grid-column-start:2 ;
+    grid-column-end: 6;
+}
+
+.product{
+    background-color: pink;
+    grid-row-start: ;
+    grid-row-end: ;
+
+    grid-column-start:1 ;
+    grid-column-end: 7;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: grid;
+   /* height: auto; */
+
+   grid-template-rows: 5rem 70vh 60vh 50vh 80vh ;
+   grid-template-columns: 2rem repeat(4,1fr) 2rem;
+}
+
+body{
+    font-size: 62.5%;
+}

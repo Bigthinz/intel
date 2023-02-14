@@ -1,0 +1,108 @@
+@font-face {
+    src:url("../font/RobotoMono-VariableFont_wght.ttf");
+	font-family: Raleway;
+}
+
+@font-face {
+    src:url("../font/RobotoSlab-VariableFont_wght.ttf");
+	font-family: Mono;
+}
+
+
+$font-mono: 'Mono', sans-serif;
+
+
+
+
+$font-primary: 'Raleway', sans-serif;
+
+
+$color-primary: #B4252A;
+$color-secondary: #111111;
+
+
+$color-primary-dem: #621A1D;
+$color-secondary-dem: #1D2024;
+$color-secondary-dem-1: #3C1819;
+
+$color-gray: #181818;
+$color-gray-light-1:#292929;
+
+$color-white: #fefefe;
+$color-gold: #FF9800;
+
+
+$default-size: 1.2rem;
+
+.letter-bold{
+	font-weight: bold;
+	color: #fff;
+}
+
+
+%heading{
+
+	font-weight: 400;
+}
+
+%after{
+	font-size: 9rem;
+	// color: $opaque;
+}
+
+
+.heading-1{
+	@extend %heading;
+	font-size: 5.5rem;
+	line-height: 1;
+
+
+	&::after{
+		@extend %after;
+	}
+}
+
+.heading-2{
+	@extend %heading;
+	font-size: 2.5rem;
+	line-height: 1;
+
+
+	
+}
+
+
+.btn{
+	color:$color-white;
+ 	text-decoration: none;
+ 	display: inline-block;
+  	
+	padding: 1.2rem 9rem;
+ 	 margin-top: 3rem;
+
+ 	 box-shadow: 0 5px 10px rgba(0,0,0,.2);
+ 	 border-radius: 7px;
+ 	 transition: all .2s ease;
+
+
+ 	  &:hover{
+ 	 	transform:translateY(-.2rem);
+ 	 	box-shadow: 0 5px 20px rgba(0,0,0,.2);
+ 	 	
+
+ 	 }
+
+
+
+ 	 &:active{
+ 	 	transform: translateY(-.1rem);
+ 	 	box-shadow: 0 3px 5px rgba(0,0,0,.3);
+ 	 }
+
+ 
+
+}
+
+
+
+

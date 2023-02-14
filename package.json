@@ -1,0 +1,11 @@
+{
+  "name": "codeintel",
+  "version": "1.0.0",
+  "description": "codeintel cooperation",
+  "main": "server.js",
+  "scripts": {
+    "sass": "node-sass public/sass/main.scss public/css/style.css -w"
+  },
+  "author": "King David",
+  "license": "MIT"
+}

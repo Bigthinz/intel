@@ -1,0 +1,42 @@
+.parent{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr) ;
+    grid-gap: 20px;
+    grid-template-areas: "header header header"
+                         "tab1 tab2 side";
+}
+
+.items{
+    border: 2px solid blue;
+}
+
+.header{
+    grid-area: header;
+}
+
+.tab-1{
+    grid-area:tab1;
+}
+
+.tab-2{
+    grid-area: tab2;
+}
+
+.side-nav{
+    grid-area: side;
+}
+
+.main{
+    grid-area: main;
+}
+
+
+.footer{
+    grid-area: footer;
+}
+
+
+

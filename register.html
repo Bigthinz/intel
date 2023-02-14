@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CodeIntel | Membership</title>
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body class='form__body'>
+<!-- 
+	<main class='content'> -->
+	<div class="leading">
+		<div class="wrap">
+			<div class="head col col-1">
+				<p>Hello, Welcome to</p>
+				<h2>code<span class='custom'>intel.</span></h2>
+			</div>
+			<div class='col-2 col'>
+				<p>Please fill forms</p>
+			</div>
+		</div>
+	</div>
+
+	<section class="main">
+		<div class="wrap">
+			<div class='avatar'>
+				<img src="public/images/Stickman.png" alt="">
+			</div>
+			<div class='field'>
+				<div class="field-first">
+					  <i><img src="public/images/icons8_user.ico" alt=""></i>
+					  <input class='firstname' type="text" placeholder=" Enter first name" style='text-transform: uppercase;' autofocus required />
+					  <i class="arrow-down"> <img src="public/images/icons8_down.ico" alt=""> </i>
+					</div>
+
+					<div class="field-second innactive">
+					  <i><img src="public/images/icons8_user.ico" alt=""></i>
+					  <input class='lastname' type="text" placeholder="Enter last name" style='text-transform: uppercase;' autofocus required />
+					  <i class="arrow-down"> <img src="public/images/icons8_down.ico" alt=""> </i>
+					</div>
+
+					 <div class="field-email innactive">
+					  <i><img src="public/images/icons8_email_send.ico" alt=""></i>
+					  <input type="email" placeholder="Enter email"  autofocus required />
+					  <i class="arrow-down"> <img src="public/images/icons8_down.ico" alt=""> </i>
+					</div>
+
+					 <div class="field-password innactive">
+					  <i><img src="public/images/icons8_touch_id.ico"></i>
+					  <input type="password" placeholder="Enter password" autofocus required />
+					  <i class="arrow-down"> <img src="public/images/icons8_down.ico" alt=""> </i>
+					</div>
+
+					 <div class="field-finish innactive final ">
+					    <p>thank you</p>
+					</div>
+
+					<div class='done'>
+						<div>
+							<img src="public/images/icons8_ok.ico" alt="">
+
+						</div>
+						<p>form submitted</p>
+					</div>
+				<form action="">
+					<div class='notification '></div>
+					
+					<div class="back-show">
+						register
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</section>
+<!-- <main>
+ -->
+	<footer>
+		 <div class="wrap">
+		 	<p>( Contact & Press)   <span>codeintel@gmail.com</span></p>
+		 </div>
+	</footer>
+
+
+
+
+	<script >
+		
+
+  	function animatedForm(){
+  const arrows = document.querySelectorAll('.arrow-down')
+  const box = document.querySelectorAll('input')
+  	let backShow = document.querySelector('.back-show')
+  	let done = document.querySelector('.done')
+  let firstName ;
+   let lastName;
+   const fieldFinish = document.querySelector('.field-finish')
+
+console.log('backShow')
+
+  box.forEach((press)=>{
+  	press.addEventListener('keypress', (e)=>{
+      	if(e.keyCode === 13){
+      		
+
+      const input = press
+      const parent = press.parentElement
+      const nextForm = parent.nextElementSibling
+      const alert =  document.querySelector('.notification')
+      
+      
+      if(input.type === 'text' && validateUser(input)){
+      	alert.classList.remove('pop')
+      	firstName = document.querySelector('.firstname').value
+      	lastName = document.querySelector('.lastname').value
+
+
+         nextSlide(parent,nextForm)
+
+      }else if(input.type === 'email' && validateEmail(input)){
+      	alert.classList.remove('pop')
+         nextSlide(parent,nextForm)
+      }else if(input.type === 'password' && validateUser(input)){
+      	alert.classList.remove('pop')
+      	fieldFinish.textContent = firstName + " " + lastName
+      	backShow.textContent = 'thanks'
+      	done.style.opacity = '1';
+        nextSlide(parent,nextForm)
+        
+      }else{
+
+        parent.style.animation = 'shake .5s ease';
+        // alert.style.animation = 'slide .5s ease';
+        removePop(alert)
+        
+      }
+      //get rid of animation
+      parent.addEventListener('animationend', ()=>{
+        parent.style.animation = ''
+        alert.style.animation = ''
+      })
+   
+      	}
+      })
+	
+  })
+  
+
+
+  arrows.forEach((arrow)=>{
+    arrow.addEventListener('click', ()=>{
+      const input = arrow.previousElementSibling;
+      const parent = arrow.parentElement
+      const nextForm = parent.nextElementSibling
+      const alert =  document.querySelector('.notification')
+      
+      
+      if(input.type === 'text' && validateUser(input)){
+      	firstName = document.querySelector('.firstname').value
+      	lastName = document.querySelector('.lastname').value
+
+      	alert.classList.remove('pop')
+         nextSlide(parent,nextForm)
+         
+      }else if(input.type === 'email' && validateEmail(input)){
+      	alert.classList.remove('pop')
+         nextSlide(parent,nextForm)
+      }else if(input.type === 'password' && validateUser(input)){
+      	fieldFinish.textContent = firstName + " " + lastName
+      	backShow.textContent = 'thanks'
+      	alert.classList.remove('pop')
+        nextSlide(parent,nextForm)
+      }else{
+
+        parent.style.animation = 'shake .5s ease';
+        // alert.style.animation = 'slide .5s ease';
+        removePop(alert)
+        
+      }
+      //get rid of animation
+      parent.addEventListener('animationend', ()=>{
+        parent.style.animation = ''
+        alert.style.animation = ''
+      })
+    })
+  })
+}
+
+function validateUser(user){
+  if(user.value.length < 6){
+    error('rgb(60, 24, 25)')
+    errorMsg('Invalid input')
+  }else{
+    error('rgb(17, 17, 17)')
+    return true
+  }
+}
+
+function errorMsg(message){
+	let element = document.querySelector('.notification')
+	element.innerHTML = `${message}`
+}
+
+function removePop(alert){
+	alert.classList.add('pop')
+        setTimeout(()=>{
+        	alert.classList.remove('pop')
+        },10000)
+}
+
+function validateEmail (email){
+  const validation = /^[^\s@]+@[^\s$]+\.[^\s@]+$/;
+  if(validation.test(email.value)){
+    error('rgb(17, 17, 17)')
+    return true
+
+  }else{
+    error('rgb(60, 24, 25)')
+    errorMsg('Invalid email address')
+  }
+}
+
+function nextSlide(parent, nextForm){
+  parent.classList.add('innactive')
+  parent.classList.remove('active')
+  nextForm.classList.add('active')
+
+}
+
+function error(color){
+  document.body.style.backgroundColor = color
+}
+
+animatedForm()
+	</script>
+
+	</main>
+	
+</body>
+</html>

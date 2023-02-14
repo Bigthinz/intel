@@ -1,0 +1,242 @@
+.wrap{
+		width: 80%;
+
+.intro{
+	font-size: 1.4rem;
+	color: #fff;
+	position: absolute;
+	top: 49%;
+	left: 25%;
+	width: 42rem;
+	transform:translate(-50%,-50%);
+
+	.heading-1{
+		font-weight: bold;
+	}
+
+	.fig{
+		text-transform: uppercase;
+		// font-family: $font-mono;
+	}
+
+
+	& > figcaption{
+		line-height: 1.9rem;
+		color: #f9f9f9;
+	}
+
+		
+		p .gold{
+			color:$color-gold;
+		}
+
+
+ .btn{
+ 	color: $color-white;
+ 	text-decoration: none;
+ 	display: inline-block;
+ 	
+ 	background: linear-gradient(45deg, $color-primary 0%,$color-primary 10%, $color-secondary 10%, $color-secondary 100%);
+ 	padding: 1.2rem 9rem;
+ 	 margin-top: 3rem;
+ 	 position: relative;
+ 	 box-shadow: 0 5px 10px rgba(0,0,0,.2);
+ 	 border-radius: 7px;
+ 	 transition: all .2s ease;
+ 	 position: relative;
+ 	 border: 2px solid $color-primary;
+	border-radius: 50px;
+
+
+
+
+ 	 // &::before{
+ 	 // 	content: '';
+ 	 // 	position: absolute;
+ 	 // 	width: 0%;
+ 	 // 	height: 100%;
+ 	 // 	background:yellow;
+ 	 // 	top: 0;
+ 	 // 	left: 0;
+ 	 // 	transform:rotate(45deg);
+ 	 // }
+
+ 	 &:hover{
+ 	 	transform:translateY(-.2rem);
+ 	 	box-shadow: 0 5px 20px rgba(0,0,0,.2);
+ 	 	
+
+ 	 }
+
+
+
+ 	 &:active{
+ 	 	transform: translateY(-.1rem);
+ 	 	box-shadow: 0 3px 5px rgba(0,0,0,.3);
+ 	 }
+
+
+ }
+
+
+
+
+}
+
+}
+
+
+.intro > * + * {
+	margin-top: 1.6rem;
+}
+
+
+
+
+.ads{
+	width: 100%;
+	background-image: linear-gradient(to right, rgba($color-secondary,.95), rgba($color-secondary,.95)), url(../images/bg-2.jpg);
+	background-size: cover;
+	background-position: center center;
+	color:$color-white;
+
+	.wrap{
+		width: 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 70vh;
+		margin:auto;
+
+
+		.ads__box{
+			text-align: center;
+
+			& > * + *{
+				margin-bottom: 1.6rem;
+			}
+
+			&>h2{
+				font-size: 4rem;
+				color: $color-white;
+				text-transform: uppercase;
+			}
+
+			&>h1{
+				font-size: 6rem;
+				color:$color-primary;
+			}
+
+			&>p{
+				font-size: 1.6rem;
+				
+			}
+
+			&>a{
+
+			}
+
+			&--btn{
+				background: $color-secondary;
+				border: 2px solid $color-primary;
+				border-radius: 50px;
+				font-size: $default-size;
+				text-transform: capitalize;
+			}
+
+		}
+
+
+	}
+}
+
+
+.stack{
+	width:100%;
+	background: $color-secondary;
+
+
+	.wrap{
+		width:80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		height: 20rem;
+
+
+		.stack__box{
+			flex-basis: 13%;
+		}
+	}
+}
+
+
+
+
+.curriculum{
+	width: 100%;
+	height: 80vh;
+	background: url('../images/bac-2.jpg');
+	background-size: cover;
+	background-position: center center;
+	color:$color-white;
+
+
+	.wrap{
+		width: 80%;
+	
+		margin: auto;
+		text-align: center;
+
+		&>h2{
+			text-transform: uppercase;
+			font-size: 2rem;
+			line-height: 10rem;
+		}
+
+
+		.curriculum__wrap{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			
+
+			.curriculum__box{
+				width: 30%;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				margin-top: 10rem;
+
+
+				&>div{
+					text-align: center;
+					margin: auto;
+
+
+					width: 11rem;
+
+
+					img{
+						width: 100%;
+					}
+
+					
+				}
+
+				h3{
+						font-size: 1.6rem;
+						text-transform: uppercase;
+						margin-top: 2rem;
+					}
+			}
+		}
+	}
+}
+
+
+
+ 	
